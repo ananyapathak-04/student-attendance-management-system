@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Student Attendance System</h1>
+
+        <!-- Search Student -->
+        <div class="search-section">
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search student by name"
+                aria-label="Search student by name"
+            >
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Present Today</h3>
+                <p id="presentToday">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Absent Today</h3>
+                <p id="absentToday">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Overall Attendance</h3>
+                <p id="overallAttendance">0.0%</p>
+            </div>
+
+        </div>
+
+        <!-- Select Date -->
+        <div class="date-section">
+            <label for="attendanceDate">Select Date:</label>
+            <input type="date" id="attendanceDate">
+        </div>
+
+        <!-- Add Student and Export -->
+        <div class="form-section">
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter Student Name"
+                aria-label="Enter student name"
+            >
+
+            <button id="addStudentBtn" type="button">
+                Add Student
+            </button>
+
+            <button id="exportBtn" type="button">
+                Export Attendance
+            </button>
+
+        </div>
+
+        <!-- Attendance Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Student Name</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                        <th>Attendance %</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentList">
+                    <!-- Student rows are added by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
